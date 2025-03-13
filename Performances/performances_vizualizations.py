@@ -27,8 +27,6 @@ plt.legend(loc="lower right")
 plt.show()
 
 # Plotting of accuracy and validation accuracy
-import numpy as np
-
 for history,i in zip(histories,sub):
     print(f"In sub - {i}")
     plt.figure(figsize=(5, 3))
