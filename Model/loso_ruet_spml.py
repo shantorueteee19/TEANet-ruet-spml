@@ -65,7 +65,7 @@ for test_sub in sub:
     X_test = scaler.transform(X_test)
     input_shape = (X_train.shape[1], 1)
     #Call model
-    num_classes = df_train.iloc[:, -1].nunique()
+    num_classes = len(y_test.unique())
     model = TEANet_model(input_shape, num_classes)
     # Compile the model
     model.compile(optimizer=RMSprop(learning_rate=0.001), loss=tf.keras.losses.SparseCategoricalCrossentropy(), metrics=['accuracy'])
